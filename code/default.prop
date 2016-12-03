@@ -1,0 +1,16 @@
+map = word=0,answer=1
+maxLeft=1
+useClassFeature=true
+useWord=true
+useNGrams=true
+noMidNGrams=true
+maxNGramLeng=6
+usePrev=true
+useNext=true
+useDisjunctive=true
+useSequences=true
+usePrevSequences=true
+useTypeSeqs=true
+useTypeSeqs2=true
+useTypeySequences=true
+wordShape=chris2useLC
