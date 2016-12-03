@@ -1,0 +1,16 @@
+trainFileList = data/te3-platinum-col/inputCol/nyt_20130321_cyprus.col,data/te3-platinum-col/inputCol/WSJ_20130321_1145.col,data/te3-platinum-col/inputCol/WSJ_20130322_159.col,data/te3-platinum-col/inputCol/bbc_20130322_1353.col,data/te3-platinum-col/inputCol/bbc_20130322_1150.col,data/te3-platinum-col/inputCol/nyt_20130322_strange_computer.col,data/te3-platinum-col/inputCol/WSJ_20130322_804.col,data/te3-platinum-col/inputCol/CNN_20130322_248.col,data/te3-platinum-col/inputCol/CNN_20130321_821.col,data/te3-platinum-col/inputCol/bbc_20130322_721.col,data/te3-platinum-col/inputCol/nyt_20130321_women_senate.col,data/te3-platinum-col/inputCol/AP_20130322.col,data/te3-platinum-col/inputCol/bbc_20130322_332.col,data/te3-platinum-col/inputCol/bbc_20130322_1600.col,data/te3-platinum-col/inputCol/CNN_20130322_314.col,data/te3-platinum-col/inputCol/CNN_20130322_1003.col,data/te3-platinum-col/inputCol/nyt_20130321_sarkozy.col,data/te3-platinum-col/inputCol/WSJ_20130318_731.col,data/te3-platinum-col/inputCol/CNN_20130322_1243.col,data/te3-platinum-col/inputCol/nyt_20130321_china_pollution.col
+maxLeft=1
+useClassFeature=true
+useWord=true
+useNGrams=true
+noMidNGrams=true
+maxNGramLeng=6
+usePrev=true
+useNext=true
+useDisjunctive=true
+useSequences=true
+usePrevSequences=true
+useTypeSeqs=true
+useTypeSeqs2=true
+useTypeySequences=true
+wordShape=chris2useLC
