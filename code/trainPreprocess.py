@@ -35,6 +35,8 @@ def inputCol():
                 if len(columns) >= 2:
                     
                     #Add to input word, events and time-exps
+                    if columns[0] == "2 1/2":
+                        columns[0] = str(2.5)
                     input = input + columns[0] + "\t" +parseEvent(columns[3]) + "\t"  + parseTmx(columns[11]) +"\n"
                     
         #Write input to a file
