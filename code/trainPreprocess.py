@@ -9,20 +9,20 @@ This file will act as a python module for parsing Training Data in appropriate .
 
 #Parse Path of directory into. col format
 def parseTimeML(Path):
-        os.system('python convertTimeMLToColumns.py '+Path+' -p stanford -o data/te3-platinum-col')
+        os.system('python convertTimeMLToColumns.py '+Path+' -p stanford -o data/TE3-Silver-data/TE3-Silver-data-col')
       
 #Select Relevant Columns for input
 def inputCol():
     #For each line in file
     input = ""
     #Training Directory is here
-    allFiles = glob.glob("data/te3-platinum-col/*.col")
+    allFiles = glob.glob("data/TE3-Silver-data/TE3-Silver-data-col/*.col")
     
     #Read Files one by one
     for colFile in allFiles:
         
         colFile_name = nameFile(colFile)
-
+    
         #do processing for single file
         with open(colFile) as f:
             next(f)
@@ -39,7 +39,7 @@ def inputCol():
                     input = input + columns[0] + "\t"+parseEntity(columns[3],  columns[11]) +"\n"
                     
             #Write input to a file
-            filename = 'stanford-ner-2015-12-09/data/te3-platinum-col/inputCol/'+ colFile_name
+            filename = 'stanford-ner-2015-12-09/data/silver-col/inputCol/'+ colFile_name
             
             #Create Directory Structure (if does not exist) and write input Colfile to it
             if not os.path.exists(os.path.dirname(filename)):
@@ -71,6 +71,3 @@ def parseEntity(event,  time):
 def nameFile(file):
     file_name = file.split("/")
     return file_name[2]
-
-
-

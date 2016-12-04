@@ -47,7 +47,7 @@ def extract(list):
     i = 0
     for element in list:
         token = element.split("/")
-        t = "data/te3-platinum-col/inputCol/"+token[2]
+        t = "data/"+"silver-col/"+"inputCol/"+token[3]
         if(i > 0):
             tokens = tokens + "," + t
         else:
