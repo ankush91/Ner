@@ -2,9 +2,11 @@
 import trainPreprocess
 import testPreprocess
 import trainModel
+import testRun
+
 def genericLoop():
     '''
-    *****MAIN CONTROL LOOP*****
+    *****MAIN CONTROL LOOP FOR THE ML TASK*****
     '''
     
     #Train Preprocess - Parse in .col Format
@@ -17,7 +19,10 @@ def genericLoop():
     #Preprocess Test Model in .txt format
     testPreprocess.preProcess()
     
-    
+    #run the learnt models on the Test-data
+    testRun.test()
+ 
+#-----------MAIN FUNCTION---------- 
 def main():
     
     

@@ -1,10 +1,15 @@
+
 import os
 import re
 
+true = 1
+false = 0
+delimiter = "/"
+
 def preProcess():
-  readPath = r"data\TE3-platinum-test"
-  writePath = r"data\TE3-platinum-test-plain"
-  delimiter = "/"
+  readPath = r"data/TE3-platinum-test"
+  writePath = r"stanford-ner-2015-12-09/data/TE3-platinum-test-text"
+  
   inExt = "tml.TE3input.xml"
   outExt = "txt"
   forceWriteFolder = true
@@ -96,3 +101,4 @@ def doPreProcessing(readPath, writePath, forceWriteFolder, overwriteFlag, inExt,
     currFile.close()
     
   return true
+

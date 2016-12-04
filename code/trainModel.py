@@ -27,7 +27,7 @@ def modifyProp_train(list):
     #Open default-prop file to read
     with open("default.prop", "r+") as file:
            prop = file.readlines()
-           prop2 = prop[1:]
+           prop2 = prop[0:]
     
     #Merge arguments
     prop1 = "trainFileList = " + extract(list)
