@@ -1,9 +1,9 @@
 import os
 import re
 
-readPath = r"B:\Projects\Python\MLProject\MLProject\data\TE3-platinum-test"
-writePath = r"B:\Projects\Python\MLProject\MLProject\data\TE3-platinum-PLAINtest"
-delimiter = "\\"
+readPath = r"data\TE3-platinum-test"
+writePath = r"data\TE3-platinum-test-col"
+delimiter = "/"
 inExt = "tml.TE3input.xml"
 outExt = "txt"
 
