@@ -1,11 +1,18 @@
 import os
 import re
 
-readPath = r"data\TE3-platinum-test"
-writePath = r"data\TE3-platinum-test-col"
-delimiter = "/"
-inExt = "tml.TE3input.xml"
-outExt = "txt"
+def preProcess():
+  readPath = r"data\TE3-platinum-test"
+  writePath = r"data\TE3-platinum-test-plain"
+  delimiter = "/"
+  inExt = "tml.TE3input.xml"
+  outExt = "txt"
+  forceWriteFolder = true
+  overwriteFlag = true
+  ignoreExtMismatch = false
+  
+  success = doPreProcessing(readPath, writePath, forceWriteFolder, overwriteFlag, inExt, outExt, ignoreExtMismatch)
+  return success
 
 def checkReadPath(readPath):
   if os.path.exists(readPath):
@@ -30,7 +37,6 @@ def checkWritePath(writePath, forceWrite):
       print "Could find directory ", writePath
       return false
 
-
 def stripTags(content):
   if ("<TEXT>" not in content) or ("</TEXT>" not in content):
     return ""
@@ -42,8 +48,7 @@ def stripTags(content):
   content = content.strip()
   return content
 
-
-def preProcess(readPath, writePath, forceWriteFolder, overwriteFlag, inExt, outExt, ignoreExtMismatch):
+def doPreProcessing(readPath, writePath, forceWriteFolder, overwriteFlag, inExt, outExt, ignoreExtMismatch):
   if (checkReadPath(readPath) == false or checkWritePath(writePath, forceWriteFolder) == false):
     return false
 
