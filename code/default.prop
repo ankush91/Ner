@@ -1,3 +1,4 @@
+serializeTo = ner-model.ser.gz
 map = word=0,answer=1
 maxLeft=1
 useClassFeature=true

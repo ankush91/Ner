@@ -1,8 +1,6 @@
 #!/usr/bin/env python
-import re
+
 import os
-import errno
-import glob
 
 '''
 This file will act as a python module for Training CRF models using Stanford CRF classifiers and list of training files
@@ -12,9 +10,15 @@ This file will act as a python module for Training CRF models using Stanford CRF
 def train(list):
     #modify properties file
     modifyProp_train(list)
+    
+    #START TRAINING THE MODEL WITH PROPERTIES FILE CONTAINING FEATURE SPECIFICATION
     os.chdir("stanford-ner-2015-12-09")
     os.system('java -cp "stanford-ner.jar:lib/*" -mx4g edu.stanford.nlp.ie.crf.CRFClassifier -prop train.prop')
     os.chdir("..")
+    
+#delete already trained model file
+def deleteTrain_model(filename):
+    os.remove("stanford-ner-2015-12-09"+'/' +filename)
     
 #modify properties file 
 def modifyProp_train(list):
@@ -22,7 +26,7 @@ def modifyProp_train(list):
     #Specify filename
     filename = "stanford-ner-2015-12-09/train.prop"
     #clear contents of file
-    open(filename, 'w').close()
+    os.remove(filename)
     
     #Open default-prop file to read
     with open("default.prop", "r+") as file:
