@@ -10,7 +10,7 @@ This file will act as a python module for parsing Training Data in appropriate .
 #Parse Path of directory into. col format
 def parseTimeML(Path):
         os.system('python convertTimeMLToColumns.py '+Path+' -p stanford -o data/TE3-Silver-data/TE3-Silver-data-col')
-      
+    
 #Select Relevant Columns for input
 def inputCol():
     #For each line in file
@@ -22,7 +22,6 @@ def inputCol():
     for colFile in allFiles:
         
         colFile_name = nameFile(colFile)
-    
         #do processing for single file
         with open(colFile) as f:
             next(f)
@@ -36,6 +35,9 @@ def inputCol():
                     #Add to input word, events and time-exps
                     if columns[0] == "2 1/2":
                         columns[0] = str(2.5)
+                    if columns[0] == "204 1/3":
+                        columns[0] = str(204.33)
+                        
                     input = input + columns[0] + "\t"+parseEntity(columns[3],  columns[11]) +"\n"
                     
             #Write input to a file
@@ -49,11 +51,11 @@ def inputCol():
                     if exc.errno != errno.EEXIST:
                         raise
                     
-            #write output to file            
-            with open(filename, "w") as file:
-                file.write(input)
-                file.write(input)
-                file.close()
+        #write output to file            
+        with open(filename, "w") as file:
+            file.write(input)
+            file.write(input)
+            file.close()
 
     return allFiles
     
@@ -70,4 +72,4 @@ def parseEntity(event,  time):
 #return name of the file   
 def nameFile(file):
     file_name = file.split("/")
-    return file_name[2]
+    return file_name[3]

@@ -11,7 +11,7 @@ def genericLoop():
     '''
     
     #Train Preprocess - Parse in .col Format
-    trainPreprocess.parseTimeML("data/TE3-Silver-data/TE3-Silver-data")
+    #trainPreprocess.parseTimeML("data/TE3-Silver-data/TE3-Silver-data")
     list = trainPreprocess.inputCol();
     
     #Train Model using Stanford Core-nlp

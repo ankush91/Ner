@@ -10,6 +10,9 @@ This file will act as a python module for Training CRF models using Stanford CRF
 def train(list):
     #modify properties file
     modifyProp_train(list)
+    #delete train model
+    if os.path.exists("stanford-ner-2015-12-09/ner-model.ser.gz"):
+        deleteTrain_model("ner-model.ser.gz")
     
     #START TRAINING THE MODEL WITH PROPERTIES FILE CONTAINING FEATURE SPECIFICATION
     os.chdir("stanford-ner-2015-12-09")
