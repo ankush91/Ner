@@ -2,6 +2,7 @@
 import os
 import errno
 import glob
+import random
 
 '''
 This file will act as a python module for parsing Training Data in appropriate .col format in our experiments
@@ -12,14 +13,22 @@ def parseTimeML(Path):
         os.system('python convertTimeMLToColumns.py '+Path+' -p stanford -o data/TE3-Silver-data/TE3-Silver-data-col')
     
 #Select Relevant Columns for input
-def inputCol():
+def inputCol(count):
     #For each line in file
     input = ""
     #Training Directory is here
     allFiles = glob.glob("data/TE3-Silver-data/TE3-Silver-data-col/*.col")
     
+    int_count = int(count)
+    
+    #Select Training Set according to count
+    if count > 0:
+        randomFiles = random.sample(allFiles,  int_count)
+    else:
+        randomFiles = allFiles
+    
     #Read Files one by one
-    for colFile in allFiles:
+    for colFile in randomFiles:
         
         colFile_name = nameFile(colFile)
         #do processing for single file
@@ -57,7 +66,7 @@ def inputCol():
             file.write(input)
             file.close()
 
-    return allFiles
+    return randomFiles
     
 #parse Tag in apporpriate format
 def parseEntity(event,  time):

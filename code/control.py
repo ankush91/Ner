@@ -37,6 +37,15 @@ def command_line_opts(argv):
     
     #Return List
     return list
+    
+#Parse Training_set count
+def parse_train_count(options):
+    if "-train_n" in  options:
+        ind = options.index("-train_n")
+        number = options[ind+1] 
+    else:
+        number = -1
+    return number
                 
 def genericLoop(argv):
     
@@ -44,13 +53,14 @@ def genericLoop(argv):
    
    #get Command Line Options
     options = command_line_opts(argv)
-   
+    count = parse_train_count(options)
+        
     #Train Preprocess - Parse in .col Format
     if "-pre_train_skip" not in options:
         trainPreprocess.parseTimeML("data/TE3-Silver-data/TE3-Silver-data")
     
     if "-train_skip" not in options:
-        list = trainPreprocess.inputCol();
+        list = trainPreprocess.inputCol(count);
         #Train Model using Stanford Core-nlp
         trainModel.train(list)
     
