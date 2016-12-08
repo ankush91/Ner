@@ -14,7 +14,7 @@ Machine Learning Techniques for Temporal Information Extraction and Normalizatio
 
 ->'-test_skip' skips the testing process. This can be used if only model generation is desired.
 
-->'–train_n <number>' allows selection of a limited number of randomly chosen training files, since training on the entire set can require hours.
+->'–train_n (number)' allows selection of a limited number of randomly chosen training files, since training on the entire set can require hours.
 
 ->It is advisable to use a machine with at least 8 GB of RAM. It will run with less memory, but performance and accuracy will suffer.
 
