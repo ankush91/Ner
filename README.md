@@ -13,13 +13,15 @@ Machine Learning Techniques for Temporal Information Extraction and Normalizatio
 	->'-test_skip' skips the testing process. This can be used if only model generation is desired.
 	->'-train_n <number>' allows selection of a limited number of randomly chosen training files, since training on the entire set can require hours.
 
-->It is advisable to use a machine with at least 8 GB of RAM. It will run with less memory, but performance and accuracy will suffer.
-	->Our project is hardcoded to use 4 GB of RAM, but this can be changed. Inability to allocate at least the specified memory 8 GB will cause a crash.
-	->Our project requires approximately 500 MB of disk space, but allowing at least 1 GB advisable.
-	->Control+Z interrupts execution at any point.
+#Hardware Configurations:
+
+	It is advisable to use a machine with at least 8 GB of RAM. It will run with less memory, but performance and accuracy will suffer.	
+	Our project is hardcoded to use 4 GB of RAM, but this can be changed. Inability to allocate at least the specified memory 8 GB will cause a crash.
+	Our project requires approximately 500 MB of disk space, but allowing at least 1 GB advisable.
+	Control+Z interrupts execution at any point.
 
 #NOTE:
-->Our last training set was of size less than 100. Therfore it isn't the fully trained model. If the full model has to be trained first then use 'python control.py'
+Our last training set was of size less than 100. Therfore it isn't the fully trained model. If the full model has to be trained first then use 'python control.py'
 
 #Licensing Information For Packages: 
 	Stanford NER is licensed under the GNU GPL (v2 or later)
