@@ -20,9 +20,6 @@ However, it also supports some command line flags:-
 * Our project requires approximately 500 MB of disk space, but allowing at least 1 GB advisable.
 * Control+Z interrupts execution at any point.
 
-# NOTE:
-Our last training set was of size less than 100. Therfore it isn't the fully trained model. If the full model has to be trained first then use 'python control.py'
-
 # Licensing Information For Packages: 
 * Stanford NER is licensed under the GNU GPL (v2 or later)
 * Stanford CoreNLP licensed under the GNU GPL (v3 or later)
@@ -30,4 +27,5 @@ Our last training set was of size less than 100. Therfore it isn't the fully tra
 # Full Code Base
 	https://www.dropbox.com/s/6uylvx80ece0zfr/Israney%2C%20Ramakrishna%20-%20Temporal%20Expression%20and%20Event%20Extraction.zip?dl=0
 
-
+# Note:
+Our last training set was of size less than 100. Therfore it isn't the fully trained model. If the full model has to be trained first then use 'python control.py'
