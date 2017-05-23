@@ -15,17 +15,17 @@ However, it also supports some command line flags:-
 
 #Hardware Configurations:
 
-	It is advisable to use a machine with at least 8 GB of RAM. It will run with less memory, but performance and accuracy will suffer.	
-	Our project is hardcoded to use 4 GB of RAM, but this can be changed. Inability to allocate at least the specified memory 8 GB will cause a crash.
-	Our project requires approximately 500 MB of disk space, but allowing at least 1 GB advisable.
-	Control+Z interrupts execution at any point.
+* It is advisable to use a machine with at least 8 GB of RAM. It will run with less memory, but performance and accuracy will suffer.	
+* Our project is hardcoded to use 4 GB of RAM, but this can be changed. Inability to allocate at least the specified memory 8 GB will cause a crash.
+* Our project requires approximately 500 MB of disk space, but allowing at least 1 GB advisable.
+* Control+Z interrupts execution at any point.
 
 #NOTE:
 Our last training set was of size less than 100. Therfore it isn't the fully trained model. If the full model has to be trained first then use 'python control.py'
 
 #Licensing Information For Packages: 
-	Stanford NER is licensed under the GNU GPL (v2 or later)
-	Stanford CoreNLP licensed under the GNU GPL (v3 or later)
+* Stanford NER is licensed under the GNU GPL (v2 or later)
+* Stanford CoreNLP licensed under the GNU GPL (v3 or later)
 
 #Full Code Base
 	https://www.dropbox.com/s/6uylvx80ece0zfr/Israney%2C%20Ramakrishna%20-%20Temporal%20Expression%20and%20Event%20Extraction.zip?dl=0
