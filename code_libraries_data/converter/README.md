@@ -1,1 +1,1 @@
-## THIS SOURCE CODE IS BORROWED FROM WORK BY A PHP STUDENT WITHOUT ANY SPECIFIED LICENSE INFORMATION:  https://github.com/paramitamirza/TimeML-CAT-Converter
+## This source code is borrowed from work by a Phd student (no license information specified): https://github.com/paramitamirza/TimeML-CAT-Converter
