@@ -25,4 +25,4 @@ This project is part of the graduate level course-work in Machine Learning (CS 6
 # Full Code Base
 	https://www.dropbox.com/s/6uylvx80ece0zfr/Israney%2C%20Ramakrishna%20-%20Temporal%20Expression%20and%20Event%20Extraction.zip?dl=0
 
-### Note: Our last training set was of size less than 100. Therfore it isn't the fully trained model. If the full model has to be trained first then use 'python control.py'
+### Note: Our last trained model used train data size = 100. To train model with all data, run with 'python control.py'
