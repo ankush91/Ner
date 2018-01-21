@@ -1,5 +1,5 @@
 
-# Information-Retrieval--Machine-Learning
+# Event & Temporal Extraction from unstructured text
 This project is part of the graduate level course-work in Machine Learning (CS 613) carried out at Drexel University in Fall, 2016. The goal of the project is to extract temporal and event expressions from unstructured text documents using Conditional Random Fields.
 
 # Software Environment & Run-Time Options
