@@ -3,7 +3,9 @@
 This project is part of the graduate level course-work in Machine Learning (CS 613) carried out at Drexel University in Fall, 2016. The goal of the project is to extract temporal and event expressions from unstructured text documents using Conditional Random Fields.
 
 ## Organization:
-* 
+* [src](./src/) contains source code and instructions to install libraries (CoreNLP), datasets and existing models
+* [paper](./paper/Conference%20Paper.pdf) is our conference-style paper generated using Latex
+* [presentation](./presentation/Temporal%20Expression%20and%20Event%20Extraction%20using%20General%20Conditional%20Random%20Fields.pptx) is our final presentation which summarizes our key experiments
 
 ## Software Environment 
 * Our code requires Ubuntu Linux (or any comparable POSIX compliant environment) to run
