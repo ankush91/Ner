@@ -9,7 +9,7 @@
 	* Controlling for these false positives, we found Recall to increase on a logscale with additional documents in steps of constant size (50 in our case). 
 * We performed a qualitative assessment of the TempEval-3 task (News domain) and compared it to the SemEval-2016 task which was based on documents from the Clinical domain.
 	* Temporal spans were easier to identify in TempEval-3 since News contains more absolute expressions such as `Last May`, `2010`, `eight years` etc. On the other hand, the Clinical domain is much harder for Temporal span identification due to complex relative expressions such as `a day before surgery` etc.
-	* On the contrary, the Clinical domain is easier for Event extraction due to the higher density of standard events and operating procedures found in such a corpus.
+	* Conversely, the Clinical domain is easier for Event extraction due to the higher density of standard events and operating procedures found in such a corpus.
 * Kindly refer to our [paper](./paper/Conference%20Paper.pdf) for further detail.
 
 ## Organization
