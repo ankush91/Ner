@@ -2,7 +2,7 @@
 # Named Entity Recognition: Event and Temporal Expressions
 * We utilized CRF classifiers from Stanford CoreNLP for the Event and Temporal Span identification tasks of [TempEval-3](https://arxiv.org/pdf/1206.5333v2.pdf). The aim of the TempEval series was to advance research on temporal information processing. This project was conducted as part of graduate level course-work in Machine Learning (CS 613) taught at Drexel University in Fall, 2016.
 
-## Research Findings
+## Research Summary
 * We performed feature engineering as suggested in the Stanford NER system and utilized word-level, char-level and n-gram level features alongside certain positional features.
 * We performed an ablation with respect to the size of the training data upto 2.5k train documents. 
 	* Precision was stagnant after a mere 50 training samples. 
