@@ -1,8 +1,18 @@
 
 # Named Entity Recognition: Event and Temporal Expressions
-This project is part of the graduate level course-work in Machine Learning (CS 613) carried out at Drexel University in Fall, 2016. The goal of the project is to extract temporal and event expressions from unstructured text documents using Conditional Random Fields.
+* We utilized CRF classifiers from Stanford CoreNLP for the Event and Temporal Span identification tasks of [TempEval-3](https://arxiv.org/pdf/1206.5333v2.pdf). The aim of the TempEval series was to advance research on temporal information processing. This project was conducted as part of graduate level course-work in Machine Learning (CS 613) taught at Drexel University in Fall, 2016.
 
-## Organization:
+## Research Findings
+* We performed feature engineering as suggested within the Stanford NER system and utilized word-level, char-level and n-gram level features alongside certain positional features.
+* We performed an ablation with respect to the size of the training data upto 2.5k train documents. 
+	* Precision was stagnant after a mere 50 training samples. 
+	* Controlling for these false positives, we found Recall to increase on a logscale with additional documents in steps of constant size (50 in our case). 
+* We performed a qualitative assessment of the TempEval-3 task (News domain) and compared it to the SemEval-2016 task which was based on documents from the Clinical domain.
+	* Temporal spans were easier to identify in TempEval-3 since News contains more absolute expressions such as `Last May`, `2010`, `eight years` etc. On the other hand, the Clinical domain is much harder for Temporal span identification due to complex relative expressions such as `a day before surgery` etc.
+	* On the contrary, the Clinical domain is easier for Event extraction due to the higher density of standard events and operating procedures found in such a corpus.
+* Kindly refer to our [paper](./paper/Conference%20Paper.pdf) for further detail.
+
+## Organization
 * [src](./src/) contains source code and instructions to install libraries (CoreNLP), datasets and existing models
 * [paper](./paper/Conference%20Paper.pdf) is our conference-style paper generated using Latex
 * [presentation](./presentation/Temporal%20Expression%20and%20Event%20Extraction%20using%20General%20Conditional%20Random%20Fields.pptx) is our final presentation which summarizes our key experiments
